@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {useNavigate} from 'react-router-dom'
 const Insert = () => {
+  let nav = useNavigate();
 
     const[input,setInput]=useState({})
     const hinput=(e)=>{
@@ -12,14 +14,13 @@ const Insert = () => {
                 ...values,[name]:value
             }
         })
-
-    }
+   }
     const submithandle=(e)=>{
       e.preventDefault();
        const api="http://localhost:8000/teacher/datasave"
        axios.post(api,input).then((res)=>{
         alert(res.data)
-        
+        nav('/display')
        })
     }
   return (

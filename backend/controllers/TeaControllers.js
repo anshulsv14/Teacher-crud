@@ -31,13 +31,20 @@ const Display=async(req,res)=>{
   const empEditSave=async(req,res)=>{
     const{_id}=req.body;
     await TeaModel.findByIdAndUpdate(_id,req.body);
+    res.send(data)
+  }
+
+  const empSearch=async(req,res)=>{
+    const {myid} = req.body;
+    let data = await TeaModel.find({Teacherno:myid})
+    res.send(data);
   }
 
 module.exports={
     dataSave,
     Display,
-   
     empDelete,
     empEditshow,
-    empEditSave
+    empEditSave,
+    empSearch
 }
