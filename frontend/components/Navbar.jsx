@@ -10,12 +10,13 @@ const Topnav = () => {
 
 <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home"></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="home">Home</Nav.Link>
-            <Nav.Link as={Link} to="insert">Insert</Nav.Link>
+            <Nav.Link as={Link} to="insert">Insert Employee </Nav.Link>
             <Nav.Link as={Link} to="display">Display</Nav.Link>
-            <Nav.Link as={Link} to="search">Search</Nav.Link>
+            <Nav.Link as={Link} to="salarysum">Salary Summery</Nav.Link>
+            <Nav.Link as={Link} to="search">Search Employee</Nav.Link>
             <Nav.Link as={Link} to="update">Update</Nav.Link>
           </Nav>
         </Container>

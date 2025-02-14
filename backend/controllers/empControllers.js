@@ -1,10 +1,11 @@
 const TeaModel= require("../models/TeaModel");
 const dataSave=async(req, res)=>{
-    const { Teacherno, Teachername, department, salary} = req.body;
+    const { employeeno, employeename,city, department, salary} = req.body;
  const Data= await  TeaModel.create({
-    Teacherno:Teacherno,
-    Teachername:Teachername,
+  employeeno:employeeno,
+    employeename:employeename,
         department:department,
+        city:city,
         salary:salary
        })
 res.send("Data Submit");
@@ -21,6 +22,8 @@ const Display=async(req,res)=>{
  await TeaModel.findByIdAndDelete(empid);
  res.send("data deleted")
   }
+ 
+ 
 
   const empEditshow=async(req,res)=>{
     const{empid}=req.body;

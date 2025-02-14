@@ -32,7 +32,7 @@ const EmpEdit=()=>{
         e.preventDefault();
         let api="http://localhost:8000/teacher/editdatasave";
         const res= await axios.post(api, mydata);
-        message.success("Record Succesfully updated!!!");
+        message.success("Record Succesfully updated!!!");a
         console.log(res);
      }
 

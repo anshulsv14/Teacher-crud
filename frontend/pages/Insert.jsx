@@ -25,32 +25,39 @@ const Insert = () => {
     }
   return (
   <>
-   <h1 style={{textAlign:"center",marginTop:"15px",marginBottom:"15px"}} >Application form</h1>
+   <h1 style={{textAlign:"center",marginTop:"15px",marginBottom:"15px"}} >Insert Employee Data</h1>
   <div id='form' >
   <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Teacher No.</Form.Label>
-        <Form.Control type="text"   name='Teacherno' onChange={hinput} />
+        <Form.Label>Enter Employee No.</Form.Label>
+        <Form.Control type="text"   name='employeeno' onChange={hinput} />
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Teacher Name</Form.Label>
-        <Form.Control type="text"   name='Teachername' onChange={hinput} />
+        <Form.Label>Enter Employee Name</Form.Label>
+        <Form.Control type="text"   name='employeename' onChange={hinput} />
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Department</Form.Label>
+        <Form.Label> Enter Department</Form.Label>
         <Form.Control type="text"   name='department' onChange={hinput} />
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>salary</Form.Label>
+        <Form.Label> Enter City</Form.Label>
+        <Form.Control type="text"   name='city' onChange={hinput} />
+        <Form.Text className="text-muted">
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label> Enter Salary</Form.Label>
         <Form.Control type="text"   name='salary' onChange={hinput} />
         <Form.Text className="text-muted">
         </Form.Text>
